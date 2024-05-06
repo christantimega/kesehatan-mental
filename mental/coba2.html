@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Kesehatan Mental</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #6A9CFD; /* Ganti dengan URL gambar latar belakang */
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: rgba(52, 152, 219, 0.8); /* Ubah warna latar belakang header menjadi semi transparan */
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin-top: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Ubah warna latar belakang konten menjadi semi transparan */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .premium-feature, .chat-bot {
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            margin-bottom: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Ubah warna latar belakang fitur menjadi semi transparan */
+        }
+        .premium-feature {
+            background-color: rgba(243, 156, 18, 0.8); /* Ubah warna fitur premium menjadi semi transparan */
+            color: #fff;
+        }
+        .chat-bot {
+            background-color: rgba(39, 174, 96, 0.8); /* Ubah warna chat bot menjadi semi transparan */
+            color: #fff;
+        }
+        .chat-bot a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .premium-feature button {
+            background-color: #fff;
+            color: #f39c12;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-right: 10px;
+            
+        }
+        .premium-feature button:hover {
+            background-color: #f7ca87;
+        }
+        .dashboard {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: rgba(240, 240, 240, 0.8); /* Ubah warna latar belakang dasbor menjadi semi transparan */
+        }
+        .dashboard-item {
+            flex: 1;
+            text-align: center;
+        }
+        .dashboard-item i {
+            font-size: 48px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>I CARE</h1>
+    </header>
+    <div class="container">
+        <div class="dashboard">
+            <div class="dashboard-item">
+                <i class="fas fa-tachometer-alt"></i>
+                <p>Dashboard</p>
+            </div>
+            <div class="dashboard-item">
+                <i class="fas fa-chart-bar"></i>
+                <p>Grafik</p>
+            </div>
+            <div class="dashboard-item">
+                <i class="fas fa-cog"></i>
+                <p>Pengaturan</p>
+            </div>
+            <div class="dashboard-item">
+                <i class="fas fa-user"></i>
+                <p>Profil</p>
+            </div>
+            <div class="dashboard-item">
+                <i class="fas fa-bell"></i>
+                <p>Notifikasi</p>
+            </div>
+        </div>
+        <div class="premium-feature">
+            <h2>Fitur Premium</h2>
+            <p>Dapatkan akses ke konselor profesional 24/7 untuk mendukung kesehatan mental Anda.</p>
+            <button onclick="window.location.href='dokter_mental.html'">Cari Dokter Mental</button>
+            <button onclick="window.location.href='transaksi_doktor.html'">Berlangganan Sekarang</button>
+
+        </div>
+        <div class="chat-bot">
+            <h2>Chat dengan Bot AI</h2>
+            <p>Berinteraksi dengan bot AI kami untuk mendapatkan saran dan dukungan kapan pun Anda butuhkan.</p>
+            <button onclick="window.location.href='chat_bot.html'">Mulai Chat Sekarang</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaksi dengan Dokter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #6495ED;
+            margin: 0;
+            padding: 0;
+        }
+        </style>
+</head>
+<body>
+    <header>
+        <h1>Transaksi dengan Dokter</h1>
+    </header>
+    <div class="container">
+        <!-- Form transaksi dengan dokter -->
+        <form action="proses_transaksi_dokter.php" method="POST">
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" name="nama" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="nomor-telepon">Nomor Telepon:</label>
+            <input type="tel" id="nomor-telepon" name="nomor-telepon" required><br><br>
+
+            <label for="pesan">Pesan:</label>
+            <textarea id="pesan" name="pesan" required></textarea><br><br>
+
+            <!-- Input lainnya sesuai kebutuhan -->
+            
+            
+            <button type="submit">Lanjutkan Transaksi</button>
+        </form>
+    </div>
+</body>
+</html>

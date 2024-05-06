@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Bot AI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #6495ED;
+            margin: 0;
+            padding: 20px;
+        }
+        .chat-container {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        .chat-container::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        .chat {
+            width: 100%;
+            overflow-y: auto;
+            padding: 10px;
+            max-height: 300px;
+        }
+        .message {
+            clear: both;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+        .message .content {
+            background-color: #f1f0f0;
+            padding: 10px;
+            border-radius: 10px;
+            max-width: 70%;
+            word-wrap: break-word;
+            float: left;
+        }
+        .message .content.user {
+            background-color: #dcf8c6;
+            float: right;
+        }
+        .message .content.bot {
+            background-color: #d1d1d1;
+        }
+        .input-container {
+            margin-top: 20px;
+        }
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #3498db;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat" id="chat-messages">
+            <div class="message bot">
+                <div class="content">Halo! Apakah ada yang bisa saya bantu?</div>
+            </div>
+        </div>
+    </div>
+    <div class="input-container">
+        <input type="text" id="user-input" placeholder="Ketik pesan Anda di sini...">
+        <button onclick="sendMessage()">Kirim</button>
+    </div>
+
+    <script>
+        function sendMessage() {
+            var userInput = document.getElementById("user-input").value;
+            var chatMessages = document.getElementById("chat-messages");
+            
+            // Tampilkan pesan pengguna
+            var userMessage = document.createElement("div");
+            userMessage.className = "message";
+            userMessage.innerHTML = `
+                <div class="content user">${userInput}</div>
+            `;
+            chatMessages.appendChild(userMessage);
+            
+            // Balas pesan secara otomatis
+            setTimeout(function() {
+                var botMessage = document.createElement("div");
+                botMessage.className = "message";
+                botMessage.innerHTML = `
+                    <div class="content bot">${generateBotResponse(userInput)}</div>
+                `;
+                chatMessages.appendChild(botMessage);
+                
+                // Auto scroll ke bawah
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }, 500); // Balasan bot muncul setelah 500ms
+
+            // Bersihkan input teks
+            document.getElementById("user-input").value = "";
+        }
+
+        // Fungsi untuk menghasilkan balasan bot
+        function generateBotResponse(userInput) {
+            // Logika balasan bot berdasarkan input pengguna
+            // Anda dapat menambahkan logika yang lebih kompleks di sini
+            return "Terima kasih atas pesan Anda!";
+        }
+    </script>
+</body>
+</html>

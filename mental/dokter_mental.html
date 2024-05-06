@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Dokter Kesehatan Mental</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #6495ED;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #3498db;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin-top: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .doctor-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .doctor {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .doctor img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .doctor h3 {
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+        .doctor p {
+            font-size: 14px;
+            color: #555;
+        }
+        .transaction-button {
+            background-color: #f39c12;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .transaction-button:hover {
+            background-color: #f7ca87;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>DOKTOR REKOMENDASI UNTUK MU</h1>
+    </header>
+    <div class="container">
+        <div class="doctor-list">
+            <div class="doctor">
+                <h3>Dr. John Doe</h3>
+                <p>Spesialis Kesehatan Mental</p>
+                <p>Pengalaman: 10 tahun</p>
+                <button class="transaction-button">Transaksi</button>
+            </div>
+            <div class="doctor">
+                <h3>Dr. Jane Smith</h3>
+                <p>Psikiater</p>
+                <p>Pengalaman: 8 tahun</p>
+                <button class="transaction-button">Transaksi</button>
+            </div>
+            <div class="doctor">
+                <h3>Dr. Samuel</h3>
+                <p>Psikiater</p>
+                <p>Pengalaman: 8 tahun</p>
+                <button class="transaction-button">Transaksi</button>
+            </div>
+           
+        </div>
+    </div>
+</body>
+</html>
